@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="waterenergy" size="1.000000 1.395095" />
+    <ImageTarget name="grassenergy" size="1.000000 1.395095" />
+    <ImageTarget name="fireenergy" size="1.000000 1.395095" />
+    <ImageTarget name="colorlessenergy" size="1.000000 1.394980" />
+    <ImageTarget name="doublecolorlessenergy" size="1.000000 1.395095" />
+    <ImageTarget name="superpotion" size="1.000000 1.393939" />
+    <ImageTarget name="potion" size="1.000000 1.393939" />
+    <ImageTarget name="wooloo" size="1.000000 1.393939" />
+    <ImageTarget name="weedle" size="1.000000 1.396055" />
+    <ImageTarget name="vaporeon" size="1.000000 1.393939" />
+    <ImageTarget name="torchic" size="1.000000 1.393939" />
+    <ImageTarget name="squirtle" size="1.000000 1.396055" />
+    <ImageTarget name="meowth" size="1.000000 1.396055" />
+    <ImageTarget name="leafeon" size="1.000000 1.393939" />
+    <ImageTarget name="lapras" size="1.000000 1.393939" />
+    <ImageTarget name="flareon" size="1.000000 1.393939" />
+    <ImageTarget name="eevee" size="1.000000 1.393939" />
+    <ImageTarget name="charmander" size="1.000000 1.393939" />
+    <ImageTarget name="bulbasaur" size="1.000000 1.396055" />
+  </Tracking>
+</QCARConfig>
