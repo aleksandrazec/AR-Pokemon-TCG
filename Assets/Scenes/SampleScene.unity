@@ -722,8 +722,8 @@ GameObject:
   m_Component:
   - component: {fileID: 368531350}
   - component: {fileID: 368531349}
-  - component: {fileID: 368531348}
   - component: {fileID: 368531347}
+  - component: {fileID: 368531351}
   m_Layer: 0
   m_Name: Super Potion
   m_TagString: Untagged
@@ -787,25 +787,6 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &368531348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368531346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 368531349}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: superpotion
-  mDatasetName: Vuforia/Pokemon.xml
-  mCastedBehaviour: {fileID: 368531349}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &368531349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,7 +813,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 368531348}
+  mPreview: {fileID: 368531351}
 --- !u!4 &368531350
 Transform:
   m_ObjectHideFlags: 0
@@ -848,6 +829,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &368531351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368531346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 368531349}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: superpotion
+  mDatasetName: Vuforia/Pokemon.xml
+  mCastedBehaviour: {fileID: 368531349}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &402001427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,8 +1660,8 @@ GameObject:
   m_Component:
   - component: {fileID: 734657981}
   - component: {fileID: 734657980}
-  - component: {fileID: 734657979}
   - component: {fileID: 734657982}
+  - component: {fileID: 734657983}
   m_Layer: 0
   m_Name: DoubleColorlessEnergy
   m_TagString: Untagged
@@ -1669,25 +1669,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &734657979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734657978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 734657980}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: doublecolorlessenergy
-  mDatasetName: Vuforia/Pokemon.xml
-  mCastedBehaviour: {fileID: 734657980}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &734657980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1714,7 +1695,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 734657979}
+  mPreview: {fileID: 734657983}
 --- !u!4 &734657981
 Transform:
   m_ObjectHideFlags: 0
@@ -1786,6 +1767,25 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &734657983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734657978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 734657980}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: doublecolorlessenergy
+  mDatasetName: Vuforia/Pokemon.xml
+  mCastedBehaviour: {fileID: 734657980}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &784974177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,9 +1796,9 @@ GameObject:
   m_Component:
   - component: {fileID: 784974181}
   - component: {fileID: 784974180}
-  - component: {fileID: 784974179}
   - component: {fileID: 784974178}
   - component: {fileID: 784974182}
+  - component: {fileID: 784974183}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -1862,25 +1862,6 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &784974179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784974177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 784974180}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: marnie
-  mDatasetName: Vuforia/Trainers.xml
-  mCastedBehaviour: {fileID: 784974180}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &784974180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1907,7 +1888,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 784974179}
+  mPreview: {fileID: 784974183}
 --- !u!4 &784974181
 Transform:
   m_ObjectHideFlags: 0
@@ -1935,6 +1916,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47fe9dc177f29f742bd0ad7cfb2c53f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &784974183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784974177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 784974180}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: marnie
+  mDatasetName: Vuforia/Trainers.xml
+  mCastedBehaviour: {fileID: 784974180}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &805563824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,8 +1945,8 @@ GameObject:
   m_Component:
   - component: {fileID: 805563827}
   - component: {fileID: 805563826}
-  - component: {fileID: 805563825}
   - component: {fileID: 805563828}
+  - component: {fileID: 805563829}
   m_Layer: 0
   m_Name: WaterEnergy
   m_TagString: Untagged
@@ -1954,25 +1954,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &805563825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805563824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 805563826}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: waterenergy
-  mDatasetName: Vuforia/Pokemon.xml
-  mCastedBehaviour: {fileID: 805563826}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &805563826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,7 +1980,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 805563825}
+  mPreview: {fileID: 805563829}
 --- !u!4 &805563827
 Transform:
   m_ObjectHideFlags: 0
@@ -2071,6 +2052,25 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &805563829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805563824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 805563826}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: waterenergy
+  mDatasetName: Vuforia/Pokemon.xml
+  mCastedBehaviour: {fileID: 805563826}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &844300093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,7 +2307,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -2470,8 +2470,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1176512656}
   - component: {fileID: 1176512655}
-  - component: {fileID: 1176512654}
   - component: {fileID: 1176512657}
+  - component: {fileID: 1176512658}
   m_Layer: 0
   m_Name: ColorlessEnergy
   m_TagString: Untagged
@@ -2479,25 +2479,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1176512654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176512653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1176512655}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: colorlessenergy
-  mDatasetName: Vuforia/Pokemon.xml
-  mCastedBehaviour: {fileID: 1176512655}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1176512655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2524,7 +2505,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1176512654}
+  mPreview: {fileID: 1176512658}
 --- !u!4 &1176512656
 Transform:
   m_ObjectHideFlags: 0
@@ -2596,6 +2577,25 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1176512658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176512653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1176512655}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: colorlessenergy
+  mDatasetName: Vuforia/Pokemon.xml
+  mCastedBehaviour: {fileID: 1176512655}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1181377372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2733,8 +2733,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1235518493}
   - component: {fileID: 1235518492}
-  - component: {fileID: 1235518491}
   - component: {fileID: 1235518494}
+  - component: {fileID: 1235518495}
   m_Layer: 0
   m_Name: GrassEnergy
   m_TagString: Untagged
@@ -2742,25 +2742,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1235518491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235518490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1235518492}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: grassenergy
-  mDatasetName: Vuforia/Pokemon.xml
-  mCastedBehaviour: {fileID: 1235518492}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1235518492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2787,7 +2768,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1235518491}
+  mPreview: {fileID: 1235518495}
 --- !u!4 &1235518493
 Transform:
   m_ObjectHideFlags: 0
@@ -2859,6 +2840,25 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1235518495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235518490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1235518492}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: grassenergy
+  mDatasetName: Vuforia/Pokemon.xml
+  mCastedBehaviour: {fileID: 1235518492}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1287832494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3340,8 +3340,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1554730863}
   - component: {fileID: 1554730862}
-  - component: {fileID: 1554730861}
   - component: {fileID: 1554730860}
+  - component: {fileID: 1554730864}
+  - component: {fileID: 1554730865}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -3405,25 +3406,6 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1554730861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554730859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1554730862}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: bede
-  mDatasetName: Vuforia/Trainers.xml
-  mCastedBehaviour: {fileID: 1554730862}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1554730862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3450,7 +3432,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1554730861}
+  mPreview: {fileID: 1554730865}
 --- !u!4 &1554730863
 Transform:
   m_ObjectHideFlags: 0
@@ -3466,6 +3448,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1554730864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554730859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47fe9dc177f29f742bd0ad7cfb2c53f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1554730865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554730859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1554730862}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: bede
+  mDatasetName: Vuforia/Trainers.xml
+  mCastedBehaviour: {fileID: 1554730862}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1592054970
 GameObject:
   m_ObjectHideFlags: 0
@@ -3519,7 +3532,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592054970}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1592054974
 Camera:
   m_ObjectHideFlags: 0
@@ -3742,8 +3755,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1956208197}
   - component: {fileID: 1956208196}
-  - component: {fileID: 1956208195}
   - component: {fileID: 1956208194}
+  - component: {fileID: 1956208198}
   m_Layer: 0
   m_Name: Potion
   m_TagString: Untagged
@@ -3807,25 +3820,6 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1956208195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1956208193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1956208196}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: potion
-  mDatasetName: Vuforia/Pokemon.xml
-  mCastedBehaviour: {fileID: 1956208196}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1956208196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3852,7 +3846,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1956208195}
+  mPreview: {fileID: 1956208198}
 --- !u!4 &1956208197
 Transform:
   m_ObjectHideFlags: 0
@@ -3868,6 +3862,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1956208198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956208193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1956208196}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: potion
+  mDatasetName: Vuforia/Pokemon.xml
+  mCastedBehaviour: {fileID: 1956208196}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1974878524 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5347140726182266241, guid: 6a3832124e4e374419adef0c9429b422, type: 3}
@@ -4154,8 +4167,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2133631294}
   - component: {fileID: 2133631293}
-  - component: {fileID: 2133631292}
   - component: {fileID: 2133631295}
+  - component: {fileID: 2133631296}
   m_Layer: 0
   m_Name: FireEnergy
   m_TagString: Untagged
@@ -4163,25 +4176,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2133631292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133631291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 2133631293}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: fireenergy
-  mDatasetName: Vuforia/Pokemon.xml
-  mCastedBehaviour: {fileID: 2133631293}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &2133631293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4208,7 +4202,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 2133631292}
+  mPreview: {fileID: 2133631296}
 --- !u!4 &2133631294
 Transform:
   m_ObjectHideFlags: 0
@@ -4280,6 +4274,25 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2133631296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133631291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 2133631293}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: fireenergy
+  mDatasetName: Vuforia/Pokemon.xml
+  mCastedBehaviour: {fileID: 2133631293}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

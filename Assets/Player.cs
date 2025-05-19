@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,19 @@ public class Player : MonoBehaviour
     Pokemon activePokemon;
     List<Pokemon> passivePokemon;
 
+
     public void endTurn(Player otherPlayer)
     {
         if (!energies.Any()) {
             activePokemon.attack(energies, otherPlayer.activePokemon);
             energies.Clear();
         }
+        Debug.Log("Turn ended inside Player");
     }
     public void addEnergy(string energy)
     {
         energies.Add(energy);
+        Debug.Log("Energy added inside Player");
     }
     public void heal(string healCard)
     {
@@ -29,5 +33,6 @@ public class Player : MonoBehaviour
         {
             activePokemon.healPokemon(60);
         }
+        Debug.Log("Heal card inside Player");
     }
 }

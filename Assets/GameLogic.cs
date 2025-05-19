@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,18 +23,21 @@ public class GameLogic : MonoBehaviour
     }
     public void player1Turn()
     {
+        Debug.Log("Player 1 turn");
         Player player2script = Player2.GetComponent<Player>();
         player2script.endTurn(Player1);
         currentPlayer = 1;
     }
     public void player2Turn()
     {
+        Debug.Log("Player 2 turn");
         Player player1script = Player1.GetComponent<Player>();
         player1script.endTurn(Player2);
         currentPlayer = 2;
     }
     public void energyDetected(string energy)
     {
+        Debug.Log("Energy detected");
         if (currentPlayer == 1)
         {
             Player player1script = Player1.GetComponent<Player>();
@@ -47,6 +51,7 @@ public class GameLogic : MonoBehaviour
     }
     public void healDetected(string healCard)
     {
+        Debug.Log("Heal detected");
         if (currentPlayer == 1)
         {
             Player player1script = Player1.GetComponent<Player>();
