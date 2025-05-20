@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+public class Attack
 {
     public string attackName;
     public List<string> energiesNeeded = new List<string>();

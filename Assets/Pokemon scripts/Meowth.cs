@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Meowth : Pokemon
 {
-    public Meowth()
+    public Meowth(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
     {
         pokemonName = "Meowth";
         pokemonHP = 70;

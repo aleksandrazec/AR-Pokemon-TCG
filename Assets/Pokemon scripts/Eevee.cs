@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Eevee : Pokemon
 {
-    public Eevee()
+    public Eevee(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
     {
         pokemonName = "Eevee";
         pokemonHP = 70;

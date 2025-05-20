@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 using static UnityEngine.EventSystems.EventTrigger;
 
 public class GameLogic : MonoBehaviour
@@ -13,7 +14,8 @@ public class GameLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Player1 = new Player();
+        Player2 = new Player();
     }
 
     // Update is called once per frame
@@ -24,15 +26,13 @@ public class GameLogic : MonoBehaviour
     public void player1Turn()
     {
         Debug.Log("Player 1 turn");
-        Player player2script = Player2.GetComponent<Player>();
-        player2script.endTurn(Player1);
+        Player2.endTurn(Player1);
         currentPlayer = 1;
     }
     public void player2Turn()
     {
         Debug.Log("Player 2 turn");
-        Player player1script = Player1.GetComponent<Player>();
-        player1script.endTurn(Player2);
+        Player1.endTurn(Player2);
         currentPlayer = 2;
     }
     public void energyDetected(string energy)
@@ -40,13 +40,11 @@ public class GameLogic : MonoBehaviour
         Debug.Log("Energy detected");
         if (currentPlayer == 1)
         {
-            Player player1script = Player1.GetComponent<Player>();
-            player1script.addEnergy(energy);
+            Player1.addEnergy(energy);
         }
         else
         {
-            Player player2script = Player2.GetComponent<Player>();
-            player2script.addEnergy(energy);
+            Player2.addEnergy(energy);
         }
     }
     public void healDetected(string healCard)
@@ -54,13 +52,40 @@ public class GameLogic : MonoBehaviour
         Debug.Log("Heal detected");
         if (currentPlayer == 1)
         {
-            Player player1script = Player1.GetComponent<Player>();
-            player1script.heal(healCard);
+            Player1.heal(healCard);
         }
         else
         {
-            Player player2script = Player2.GetComponent<Player>();
-            player2script.heal(healCard);
+            Player2.heal(healCard);
+        }
+    }
+
+    public void pokemonDetected(string pokemonName)
+    {
+        GameObject pokemonModel = GameObject.Find(pokemonName).transform.GetChild(0).gameObject;
+        Debug.Log(pokemonName+" detected");
+        if (currentPlayer == 1)
+        {
+            Player1.addPokemon(pokemonName, pokemonModel);
+        }
+        else
+        {
+            Player2.addPokemon(pokemonName, pokemonModel);
+        }
+        Debug.Log("finished pokemon detection");
+    }
+
+    public void pokemonDissapeared(string pokemonName)
+    {
+        GameObject pokemonModel = GameObject.Find(pokemonName).transform.GetChild(0).gameObject;
+        Debug.Log(pokemonName+" dissapeared");
+        if (currentPlayer == 1)
+        {
+            Player1.hidePokemon(pokemonName, pokemonModel);
+        }
+        else
+        {
+            Player2.hidePokemon(pokemonName, pokemonModel);
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Squirtle : Pokemon
 {
-    public Squirtle()
+    public Squirtle(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
     {
         pokemonName = "Squirtle";
         pokemonHP = 60;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Vaporeon : Pokemon
 {
-    public Vaporeon()
+    public Vaporeon(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
     {
         pokemonName = "Vaporeon";
         pokemonHP = 130;

@@ -381,10 +381,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lapras
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDissapeared
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lapras
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &229432187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,10 +540,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Charmender
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDissapeared
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Charmender
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &334714446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,10 +689,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Leafeon
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDissapeared
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Leafeon
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &348092448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,10 +979,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Meowth
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDissapeared
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Meowth
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &402001430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1118,10 +1214,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Vaporeon
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDissapeared
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Vaporeon
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &417001335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,10 +1368,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Weedle
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDissapeared
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Weedle
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &477789695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1490,10 +1634,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Flareon
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDissapeared
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Flareon
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &691234265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1798,7 +1966,6 @@ GameObject:
   - component: {fileID: 784974180}
   - component: {fileID: 784974178}
   - component: {fileID: 784974182}
-  - component: {fileID: 784974183}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -1888,7 +2055,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 784974183}
+  mPreview: {fileID: 784974182}
 --- !u!4 &784974181
 Transform:
   m_ObjectHideFlags: 0
@@ -1905,18 +2072,6 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &784974182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784974177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47fe9dc177f29f742bd0ad7cfb2c53f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &784974183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2130,10 +2285,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Torchic
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDissapeared
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Torchic
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &844300096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3074,10 +3253,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Wooloo
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDissapeared
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Wooloo
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1486418649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3199,10 +3402,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Squirtle
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Squirtle
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1487670634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3342,7 +3569,6 @@ GameObject:
   - component: {fileID: 1554730862}
   - component: {fileID: 1554730860}
   - component: {fileID: 1554730864}
-  - component: {fileID: 1554730865}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -3432,7 +3658,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1554730865}
+  mPreview: {fileID: 1554730864}
 --- !u!4 &1554730863
 Transform:
   m_ObjectHideFlags: 0
@@ -3449,18 +3675,6 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1554730864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554730859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47fe9dc177f29f742bd0ad7cfb2c53f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1554730865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3966,10 +4180,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bulbasaur
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDissapeared
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bulbasaur
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2020554841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4091,10 +4329,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDetected
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Eevee
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 40471916}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: pokemonDissapeared
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Eevee
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2086905421
 MonoBehaviour:
   m_ObjectHideFlags: 0

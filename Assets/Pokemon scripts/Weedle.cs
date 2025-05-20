@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weedle : Pokemon
 {
 
-   public Weedle()
+   public Weedle(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
     {
         pokemonName = "Weedle";
         pokemonHP = 50;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Charmender : Pokemon
 {
-    public Charmender()
+    public Charmender(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
     {
         pokemonName = "Charmender";
         pokemonHP = 60;

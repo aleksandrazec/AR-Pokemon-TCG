@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lapras : Pokemon
 {
-    public Lapras()
+    public Lapras(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
     {
         pokemonName = "Eevee";
         pokemonHP = 130;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Torchic : Pokemon
 {
-    public Torchic()
+    public Torchic(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
     {
         pokemonName = "Torchic";
         pokemonHP = 60;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Leafeon : Pokemon
 {
-    public Leafeon()
+    public Leafeon(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
     {
         pokemonName = "Leafeon";
         pokemonHP = 120;
