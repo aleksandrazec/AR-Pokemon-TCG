@@ -2486,7 +2486,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -3420,7 +3420,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 40471916}
         m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
-        m_MethodName: pokemonDetected
+        m_MethodName: pokemonDissapeared
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
