@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class Player
 {
-    List<string> energies= new List<string>();
-    Pokemon activePokemon;
-    List<Pokemon> pokemonList= new List<Pokemon>();
+    protected List<string> energies= new List<string>();
+    protected Pokemon activePokemon;
+    protected List<Pokemon> pokemonList= new List<Pokemon>();
     public void findActivePokemon()
     {
-        if (!pokemonList.Any())
+        if (pokemonList.Any())
         {
             float bestPosition = -100000f;
 
@@ -27,12 +27,13 @@ public class Player
                     }
                 }
             }
-            Debug.Log(activePokemon + " is the active pokemon");
+            Debug.Log(activePokemon.getName() + " is the active pokemon");
         }
     }
     public void endTurn(Player otherPlayer)
     {
-        if (!energies.Any()) {
+        if (energies.Any()) {
+            Debug.Log("Check for energies");
             findActivePokemon();
             otherPlayer.findActivePokemon();
             activePokemon.attack(energies, otherPlayer.activePokemon);
