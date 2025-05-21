@@ -8,6 +8,7 @@ public class Lapras : Pokemon
     {
         pokemonName = "Eevee";
         pokemonHP = 130;
+        maxPokemonHP = 130;
         List<string> waterGunEnergies = new List<string> { "water" };
         Attack waterGun = new Attack("WaterGun", waterGunEnergies, 30, "water");
         pokemonAttacks.Add(waterGun);

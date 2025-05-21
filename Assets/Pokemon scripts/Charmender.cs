@@ -8,6 +8,7 @@ public class Charmender : Pokemon
     {
         pokemonName = "Charmender";
         pokemonHP = 60;
+        maxPokemonHP = 60;
         List<string> heatTackleEnergies = new List<string> { "fire" };
         Attack heatTackle = new Attack("HeatTackle", heatTackleEnergies, 30, "fire");
         pokemonAttacks.Add(heatTackle);

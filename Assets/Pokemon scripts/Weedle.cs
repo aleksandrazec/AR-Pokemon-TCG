@@ -9,6 +9,7 @@ public class Weedle : Pokemon
     {
         pokemonName = "Weedle";
         pokemonHP = 50;
+        maxPokemonHP = 50;
         List<string> ramEnergies = new List<string> { "grass" };
         Attack ram = new Attack("Ram", ramEnergies, 10, "grass");
         pokemonAttacks.Add(ram);

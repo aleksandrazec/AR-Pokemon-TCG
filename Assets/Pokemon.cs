@@ -6,6 +6,7 @@ using UnityEngine;
 public abstract class Pokemon
 {
     protected string pokemonName;
+    protected int maxPokemonHP;
     protected int pokemonHP;
     protected List<Attack> pokemonAttacks = new List<Attack>();
     protected Player player;
@@ -54,6 +55,10 @@ public abstract class Pokemon
     }
     public void healPokemon(int healAmount)
     {
+        if (pokemonHP + healAmount >= maxPokemonHP)
+        {
+            pokemonHP = maxPokemonHP;
+        }
         pokemonHP = pokemonHP + healAmount;
         Debug.Log("Pokemon healed "+pokemonHP+" hp");
     }
