@@ -8,6 +8,7 @@ public class Flareon : Pokemon
     {
         pokemonName = "Flareon";
         pokemonHP = 130;
+        maxPokemonHP = 130;
         List<string> destructiveFlameEnergies = new List<string> { "fire" };
         Attack destructiveFlame = new Attack("DestructiveFlame", destructiveFlameEnergies, 30, "fire");
         pokemonAttacks.Add(destructiveFlame);

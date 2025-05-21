@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.XR;
 using static UnityEngine.EventSystems.EventTrigger;
@@ -77,15 +78,18 @@ public class GameLogic : MonoBehaviour
 
     public void pokemonDissapeared(string pokemonName)
     {
-        GameObject pokemonModel = GameObject.Find(pokemonName).transform.GetChild(0).gameObject;
-        Debug.Log(pokemonName+" dissapeared");
-        if (currentPlayer == 1)
+        if (GameObject.Find(pokemonName).transform.childCount > 0)
         {
-            Player1.hidePokemon(pokemonName, pokemonModel);
-        }
-        else
-        {
-            Player2.hidePokemon(pokemonName, pokemonModel);
+            GameObject pokemonModel = GameObject.Find(pokemonName).transform.GetChild(0).gameObject;
+            Debug.Log(pokemonName + " dissapeared");
+            if (currentPlayer == 1)
+            {
+                Player1.hidePokemon(pokemonName, pokemonModel);
+            }
+            else
+            {
+                Player2.hidePokemon(pokemonName, pokemonModel);
+            }
         }
     }
 }

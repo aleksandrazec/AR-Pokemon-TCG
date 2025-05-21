@@ -8,6 +8,7 @@ public class Squirtle : Pokemon
     {
         pokemonName = "Squirtle";
         pokemonHP = 60;
+        maxPokemonHP = 60;
         List<string> withdrawEnergies = new List<string> { "water" };
         Attack withdraw = new Attack("Withdraw", withdrawEnergies, 30, "water");
         pokemonAttacks.Add(withdraw);

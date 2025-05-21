@@ -8,6 +8,7 @@ public class Wooloo : Pokemon
     {
         pokemonName = "Wooloo";
         pokemonHP = 70;
+        maxPokemonHP = 70;
         List<string> smashKickEnergies = new List<string> { "colorless", "double" };
         Attack smashKick = new Attack("SmashKick", smashKickEnergies, 50, "colorless");
         pokemonAttacks.Add(smashKick);
