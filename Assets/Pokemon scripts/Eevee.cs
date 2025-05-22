@@ -9,6 +9,7 @@ public class Eevee : Pokemon
     {
         pokemonName = "Eevee";
         pokemonHP = 70;
+        maxPokemonHP = 70;
         List<string> cheerUpEnergies = new List<string> { "colorless" };
         Attack cheerUp = new Attack("CheerUp", cheerUpEnergies, 30, "colorless");
         pokemonAttacks.Add(cheerUp);

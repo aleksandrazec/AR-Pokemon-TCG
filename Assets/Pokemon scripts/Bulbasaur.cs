@@ -8,6 +8,7 @@ public class Bulbasaur : Pokemon
     {
         pokemonName = "Bulbasaur";
         pokemonHP = 70;
+        maxPokemonHP = 70;
         List<string> leechSeedEnergies = new List<string> { "grass", "colorless" };
         Attack leechSeed = new Attack("LeechSeed", leechSeedEnergies, 20, "grass");
         pokemonAttacks.Add(leechSeed);

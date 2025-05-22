@@ -8,6 +8,7 @@ public class Torchic : Pokemon
     {
         pokemonName = "Torchic";
         pokemonHP = 60;
+        maxPokemonHP = 60;
         List<string> scratchEnergies = new List<string> { "fire", "colorless" };
         Attack scratch = new Attack("Scratch", scratchEnergies, 20, "grass");
         pokemonAttacks.Add(scratch);

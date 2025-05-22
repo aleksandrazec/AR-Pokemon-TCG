@@ -8,6 +8,7 @@ public class Meowth : Pokemon
     {
         pokemonName = "Meowth";
         pokemonHP = 70;
+        maxPokemonHP = 70;
         List<string> comeHereRightMeowEnergies = new List<string> { "colorless" };
         Attack comeHereRightMeow = new Attack("ComeHereRightMeow", comeHereRightMeowEnergies, 30, "colorless");
         pokemonAttacks.Add(comeHereRightMeow);

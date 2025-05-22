@@ -8,6 +8,7 @@ public class Vaporeon : Pokemon
     {
         pokemonName = "Vaporeon";
         pokemonHP = 130;
+        maxPokemonHP = 130;
         List<string> spiralDrainEnergies = new List<string> { "water" };
         Attack spiralDrain = new Attack("SpiralDrain", spiralDrainEnergies, 30, "water");
         pokemonAttacks.Add(spiralDrain);

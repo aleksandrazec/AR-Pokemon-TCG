@@ -9,6 +9,7 @@ public abstract class Pokemon
 {
     //protected ParticleCall particleEffect=new ParticleCall();
     protected string pokemonName;
+    protected int maxPokemonHP;
     protected int pokemonHP;
     protected List<Attack> pokemonAttacks;
     protected Player player;
@@ -58,6 +59,10 @@ public abstract class Pokemon
     }
     public void healPokemon(int healAmount)
     {
+        if (pokemonHP + healAmount >= maxPokemonHP)
+        {
+            pokemonHP = maxPokemonHP;
+        }
         pokemonHP = pokemonHP + healAmount;
         Debug.Log("Pokemon healed "+pokemonHP+" hp");
     }

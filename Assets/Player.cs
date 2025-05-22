@@ -19,7 +19,7 @@ public class Player
             {
                 if (pokemon.visible)
                 {
-                    float position = pokemon.getModel().transform.position.y;
+                    float position = pokemon.getModel().transform.position.z;
                     if (position > bestPosition)
                     {
                         bestPosition = position;
@@ -36,7 +36,10 @@ public class Player
             Debug.Log("Check for energies");
             findActivePokemon();
             otherPlayer.findActivePokemon();
-            activePokemon.attack(energies, otherPlayer.activePokemon);
+            if (otherPlayer.activePokemon != null)
+            {
+                activePokemon.attack(energies, otherPlayer.activePokemon);
+            }
             energies.Clear();
         }
         Debug.Log("Turn ended inside Player");
