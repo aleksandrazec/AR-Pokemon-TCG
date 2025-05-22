@@ -1,14 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public abstract class Pokemon
 {
+    //protected ParticleCall particleEffect=new ParticleCall();
     protected string pokemonName;
     protected int maxPokemonHP;
     protected int pokemonHP;
-    protected List<Attack> pokemonAttacks = new List<Attack>();
+    protected List<Attack> pokemonAttacks;
     protected Player player;
     GameObject pokemonModel;
     public bool visible=true;
@@ -16,6 +19,7 @@ public abstract class Pokemon
     {
         player = myPlayer;
         pokemonModel = myModel;
+        pokemonAttacks = new List<Attack>();
     }
     public string getName()
     {
@@ -62,18 +66,32 @@ public abstract class Pokemon
         pokemonHP = pokemonHP + healAmount;
         Debug.Log("Pokemon healed "+pokemonHP+" hp");
     }
-    public void attack(List<string> energies, Pokemon pokemon)
+    public void attack(List<string> energies, Pokemon otherPokemon)
     {
+        Debug.Log("inside attack function");
         Attack currentAttack=null;
         foreach(Attack attack in pokemonAttacks)
         {
-            if (energies.Equals(attack.energiesNeeded))
+            var firstNotSecond = energies.Except(attack.energiesNeeded).ToList();
+            var secondNotFirst = attack.energiesNeeded.Except(energies).ToList();
+
+            if (!firstNotSecond.Any()&& !secondNotFirst.Any())
             {
                 currentAttack = attack;
             }
         }
-        int attackPower = currentAttack.attackPower;
-        Debug.Log("Pokemon attacked");
-        pokemon.damagePokemon(attackPower);
+        if (currentAttack != null)
+        {
+            int attackPower = currentAttack.attackPower;
+            Debug.Log("Pokemon attacked");
+            otherPokemon.damagePokemon(attackPower);
+            ParticleSystem[] particle = pokemonModel.GetComponentsInChildren<ParticleSystem>(true);
+            particle[0].Play();
+            if (particle.Length == 2)
+            {
+                particle[1].Play();
+            }
+        }
+
     }
 }
