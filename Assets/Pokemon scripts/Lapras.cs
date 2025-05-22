@@ -6,7 +6,7 @@ public class Lapras : Pokemon
 {
     public Lapras(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
     {
-        pokemonName = "Eevee";
+        pokemonName = "Lapras";
         pokemonHP = 130;
         maxPokemonHP = 130;
         List<string> waterGunEnergies = new List<string> { "water" };
