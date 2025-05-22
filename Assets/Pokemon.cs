@@ -7,7 +7,6 @@ using static UnityEngine.ParticleSystem;
 
 public abstract class Pokemon
 {
-    //protected ParticleCall particleEffect=new ParticleCall();
     protected string pokemonName;
     protected int maxPokemonHP;
     protected int pokemonHP;
@@ -91,6 +90,8 @@ public abstract class Pokemon
             {
                 particle[1].Play();
             }
+            AudioSource[] source = pokemonModel.GetComponentsInChildren<AudioSource>(true);
+            source[0].Play();
         }
 
     }
