@@ -62,30 +62,36 @@ public class GameLogic : MonoBehaviour
 
     public void pokemonDetected(string pokemonName)
     {
-        GameObject pokemonModel = GameObject.Find(pokemonName).transform.GetChild(0).gameObject;
-        Debug.Log(pokemonName+" detected");
-        if (currentPlayer == 1)
+        if (GameObject.Find(pokemonName).transform.childCount > 0)
         {
-            Player1.addPokemon(pokemonName, pokemonModel);
+            GameObject pokemonModel = GameObject.Find(pokemonName).transform.GetChild(0).gameObject;
+            Debug.Log(pokemonName + " detected");
+            if (currentPlayer == 1)
+            {
+                Player1.addPokemon(pokemonName, pokemonModel);
+            }
+            else
+            {
+                Player2.addPokemon(pokemonName, pokemonModel);
+            }
+            Debug.Log("finished pokemon detection");
         }
-        else
-        {
-            Player2.addPokemon(pokemonName, pokemonModel);
-        }
-        Debug.Log("finished pokemon detection");
     }
 
     public void pokemonDissapeared(string pokemonName)
     {
-        GameObject pokemonModel = GameObject.Find(pokemonName).transform.GetChild(0).gameObject;
-        Debug.Log(pokemonName+" dissapeared");
-        if (currentPlayer == 1)
+        if (GameObject.Find(pokemonName).transform.childCount > 0)
         {
-            Player1.hidePokemon(pokemonName, pokemonModel);
-        }
-        else
-        {
-            Player2.hidePokemon(pokemonName, pokemonModel);
+            GameObject pokemonModel = GameObject.Find(pokemonName).transform.GetChild(0).gameObject;
+            Debug.Log(pokemonName + " dissapeared");
+            if (currentPlayer == 1)
+            {
+                Player1.hidePokemon(pokemonName, pokemonModel);
+            }
+            else
+            {
+                Player2.hidePokemon(pokemonName, pokemonModel);
+            }
         }
     }
 }
