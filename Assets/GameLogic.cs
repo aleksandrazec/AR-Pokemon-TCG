@@ -15,14 +15,20 @@ public class GameLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player1 = new Player();
-        Player2 = new Player();
+        Player1 = new Player("Marnie");
+        Player2 = new Player("Bede");
+        InvokeRepeating("updateHP", 2.0f, 0.2f);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void updateHP()
+    {
+        Player1.updatePokemonHealth();
+        Player2.updatePokemonHealth();
     }
     public void player1Turn()
     {
@@ -63,9 +69,9 @@ public class GameLogic : MonoBehaviour
 
     public void pokemonDetected(string pokemonName)
     {
-        if (GameObject.Find(pokemonName).transform.childCount > 0)
+        GameObject pokemonModel = GameObject.Find(pokemonName);
+        if (pokemonModel != null)
         {
-            GameObject pokemonModel = GameObject.Find(pokemonName).transform.GetChild(0).gameObject;
             Debug.Log(pokemonName + " detected");
             if (currentPlayer == 1)
             {
@@ -81,9 +87,9 @@ public class GameLogic : MonoBehaviour
 
     public void pokemonDissapeared(string pokemonName)
     {
-        if (GameObject.Find(pokemonName).transform.childCount > 0)
+        GameObject pokemonModel = GameObject.Find(pokemonName);
+        if (pokemonModel != null)
         {
-            GameObject pokemonModel = GameObject.Find(pokemonName).transform.GetChild(0).gameObject;
             Debug.Log(pokemonName + " dissapeared");
             if (currentPlayer == 1)
             {

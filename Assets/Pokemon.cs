@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static UnityEngine.ParticleSystem;
 
 public abstract class Pokemon
@@ -14,11 +16,27 @@ public abstract class Pokemon
     protected Player player;
     GameObject pokemonModel;
     public bool visible=true;
+
     public Pokemon(Player myPlayer, GameObject myModel)
     {
         player = myPlayer;
         pokemonModel = myModel;
         pokemonAttacks = new List<Attack>();
+
+        if (pokemonModel == null)
+        {
+            Debug.LogError("Pokemon model is null!");
+            return;
+        }
+    }
+
+    public int getMaxHP()
+    {
+        return maxPokemonHP;
+    }
+    public int getHP()
+    {
+        return pokemonHP;
     }
     public string getName()
     {
@@ -30,12 +48,16 @@ public abstract class Pokemon
     }
     public void damagePokemon(int damageAmount)
     {
-        pokemonHP = pokemonHP - damageAmount;
-        Debug.Log("Pokemon damaged");
-        if (pokemonHP <= 0)
+        if (pokemonHP - damageAmount <= 0)
         {
+            pokemonHP = 0;
             killPokemon();
         }
+        else
+        {
+            pokemonHP = pokemonHP - damageAmount;
+        }
+        Debug.Log("Pokemon damaged");
         Debug.Log(pokemonName + " damaged, now has "+pokemonHP+" hp");
     }
     public void hidePokemon()
@@ -85,13 +107,19 @@ public abstract class Pokemon
             Debug.Log("Pokemon attacked");
             otherPokemon.damagePokemon(attackPower);
             ParticleSystem[] particle = pokemonModel.GetComponentsInChildren<ParticleSystem>(true);
-            particle[0].Play();
-            if (particle.Length == 2)
+            if (particle.Length != 0)
             {
-                particle[1].Play();
+                particle[0].Play();
+                if (particle.Length == 2)
+                {
+                    particle[1].Play();
+                }
             }
             AudioSource[] source = pokemonModel.GetComponentsInChildren<AudioSource>(true);
-            source[0].Play();
+            if (source.Length != 0)
+            {
+                source[0].Play();
+            }
         }
 
     }

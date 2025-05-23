@@ -8,7 +8,7 @@ public class Leafeon : Pokemon
     {
         pokemonName = "Leafeon";
         pokemonHP = 120;
-        maxPokemonHP = 130;
+        maxPokemonHP = 120;
         List<string> leafletBlessingsEnergies = new List<string> { "colorless" };
         Attack leafletBlessings = new Attack("LeafletBlessings", leafletBlessingsEnergies, 30, "colorless");
         pokemonAttacks.Add(leafletBlessings);

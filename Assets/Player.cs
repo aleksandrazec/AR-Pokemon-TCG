@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class Player
@@ -9,6 +10,44 @@ public class Player
     protected List<string> energies= new List<string>();
     protected Pokemon activePokemon;
     protected List<Pokemon> pokemonList= new List<Pokemon>();
+    protected int deadPokemonCounter=0;
+    protected string playerName;
+    public Player(string trainer)
+    {
+        playerName = trainer;
+    }
+    public void updatePokemonHealth()
+    {
+        foreach (Pokemon pokemon in pokemonList)
+        {
+            string textObjectName = pokemon.getName() + "Text";
+            GameObject textObj = GameObject.Find(textObjectName);
+
+            if (textObj != null)
+            {
+                TextMeshProUGUI hpText = textObj.GetComponent<TextMeshProUGUI>();
+
+                if (hpText != null)
+                {
+                    if (pokemon.visible)
+                    {
+                        hpText.text = pokemon.getHP()+"/"+pokemon.getMaxHP();
+
+                        Vector3 worldPos = pokemon.getModel().transform.position;
+                        Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPos + new Vector3(0, 0, 0.5f)); 
+                        RectTransform rectTransform = hpText.GetComponent<RectTransform>();
+                        rectTransform.position = screenPos;
+
+                        hpText.enabled = true;
+                    }
+                    else
+                    {
+                        hpText.enabled = false;
+                    }
+                }
+            }
+        }
+    }
     public void findActivePokemon()
     {
         if (pokemonList.Any())
@@ -30,6 +69,15 @@ public class Player
             Debug.Log(activePokemon.getName() + " is the active pokemon");
         }
     }
+    public void win()
+    {
+        GameObject textObj = GameObject.Find("WinText");
+        if (textObj != null)
+        {
+            TextMeshProUGUI label = textObj.GetComponent<TextMeshProUGUI>();
+            label.text = playerName+ " won!";
+        }
+    }
     public void endTurn(Player otherPlayer)
     {
         if (energies.Any()) {
@@ -41,6 +89,9 @@ public class Player
                 activePokemon.attack(energies, otherPlayer.activePokemon);
             }
             energies.Clear();
+            if (otherPlayer.deadPokemonCounter>=3){
+                win();
+            }
         }
         Debug.Log("Turn ended inside Player");
     }
@@ -63,7 +114,24 @@ public class Player
     }
     public void removePokemon(Pokemon pokemon)
     {
+        string textObjectName = pokemon.getName() + "Text";
+        GameObject textObj = GameObject.Find(textObjectName);
+        if (textObj != null)
+        {
+            TextMeshProUGUI hpText = textObj.GetComponent<TextMeshProUGUI>();
+            if (hpText != null)
+            {
+                hpText.enabled = false;
+                hpText.text = "";
+            }
+        }
         pokemonList.Remove(pokemon);
+        pokemon.hidePokemon();
+        deadPokemonCounter++;
+        if (activePokemon == pokemon)
+        {
+            activePokemon = null;
+        }
         Debug.Log("Pokemon removed inside Player");
 
     }
