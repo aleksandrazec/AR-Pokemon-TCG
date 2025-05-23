@@ -14,7 +14,7 @@ public class Weedle : Pokemon
         Attack ram = new Attack("Ram", ramEnergies, 10, "grass");
         pokemonAttacks.Add(ram);
         List<string> bugBiteEnergies = new List<string> { "double" };
-        Attack bugBite = new Attack("BugBite", bugBiteEnergies, 10, "colorless");
+        Attack bugBite = new Attack("BugBite", bugBiteEnergies, 20, "colorless");
         pokemonAttacks.Add(bugBite);
     }
 }
