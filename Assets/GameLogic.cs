@@ -70,8 +70,6 @@ public class GameLogic : MonoBehaviour
     public void pokemonDetected(string pokemonName)
     {
         GameObject pokemonModel = GameObject.Find(pokemonName);
-        if (pokemonModel != null)
-        {
             Debug.Log(pokemonName + " detected");
             if (currentPlayer == 1)
             {
@@ -82,14 +80,11 @@ public class GameLogic : MonoBehaviour
                 Player2.addPokemon(pokemonName, pokemonModel);
             }
             Debug.Log("finished pokemon detection");
-        }
     }
 
     public void pokemonDissapeared(string pokemonName)
     {
         GameObject pokemonModel = GameObject.Find(pokemonName);
-        if (pokemonModel != null)
-        {
             Debug.Log(pokemonName + " dissapeared");
             if (currentPlayer == 1)
             {
@@ -99,6 +94,5 @@ public class GameLogic : MonoBehaviour
             {
                 Player2.hidePokemon(pokemonName, pokemonModel);
             }
-        }
     }
 }

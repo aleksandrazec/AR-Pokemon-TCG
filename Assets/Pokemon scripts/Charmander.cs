@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Charmender : Pokemon
+public class Charmander : Pokemon
 {
-    public Charmender(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
+    public Charmander(Player myPlayer, GameObject myModel) : base(myPlayer, myModel)
     {
-        pokemonName = "Charmender";
+        pokemonName = "Charmander";
         pokemonHP = 60;
         maxPokemonHP = 60;
         List<string> heatTackleEnergies = new List<string> { "fire" };

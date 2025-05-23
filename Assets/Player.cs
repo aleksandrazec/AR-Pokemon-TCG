@@ -128,6 +128,40 @@ public class Player
         pokemonList.Remove(pokemon);
         pokemon.hidePokemon();
         deadPokemonCounter++;
+        
+        string livesObjectName = playerName + "Lives";
+        GameObject livesObj = GameObject.Find(livesObjectName);
+        TextMeshProUGUI livesText = livesObj.GetComponent<TextMeshProUGUI>();
+        if (deadPokemonCounter == 0)
+        {
+            livesText.text = "OOO";
+        }else if (deadPokemonCounter==1)
+        {
+            if (playerName == "Marnie")
+            {
+                livesText.text = "OOX";
+            }
+            else
+            {
+                livesText.text = "XOO";
+            }
+        }else if (deadPokemonCounter == 2)
+        {
+            if (playerName == "Marnie")
+            {
+                livesText.text = "OXX";
+            }
+            else
+            {
+                livesText.text = "XXO";
+            }
+        }
+        else
+        {
+            livesText.text = "XXX";
+        }
+
+
         if (activePokemon == pokemon)
         {
             activePokemon = null;
@@ -186,8 +220,8 @@ public class Player
                 case "Weedle":
                     pokemon = new Weedle(this, pokemonModel);
                     break;
-                case "Charmender":
-                    pokemon = new Charmender(this, pokemonModel);
+                case "Charmander":
+                    pokemon = new Charmander(this, pokemonModel);
                     break;
                 case "Eevee":
                     pokemon = new Eevee(this, pokemonModel);

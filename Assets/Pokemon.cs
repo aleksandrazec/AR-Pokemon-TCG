@@ -84,7 +84,10 @@ public abstract class Pokemon
         {
             pokemonHP = maxPokemonHP;
         }
-        pokemonHP = pokemonHP + healAmount;
+        else
+        {
+            pokemonHP = pokemonHP + healAmount;
+        }
         Debug.Log("Pokemon healed "+pokemonHP+" hp");
     }
     public void attack(List<string> energies, Pokemon otherPokemon)
