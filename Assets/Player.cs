@@ -42,6 +42,7 @@ public class Player
                     }
                     else
                     {
+                        hpText.text = "";
                         hpText.enabled = false;
                     }
                 }
@@ -121,8 +122,8 @@ public class Player
             TextMeshProUGUI hpText = textObj.GetComponent<TextMeshProUGUI>();
             if (hpText != null)
             {
-                hpText.enabled = false;
                 hpText.text = "";
+                hpText.enabled = false;
             }
         }
         pokemonList.Remove(pokemon);
@@ -160,7 +161,6 @@ public class Player
         {
             livesText.text = "XXX";
         }
-
 
         if (activePokemon == pokemon)
         {

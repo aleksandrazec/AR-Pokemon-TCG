@@ -8618,7 +8618,7 @@ GameObject:
   - component: {fileID: 2086905420}
   - component: {fileID: 2086905423}
   m_Layer: 0
-  m_Name: EeeveCard
+  m_Name: EeveeCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
