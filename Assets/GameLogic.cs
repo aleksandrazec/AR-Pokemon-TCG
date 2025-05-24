@@ -17,7 +17,6 @@ public class GameLogic : MonoBehaviour
     {
         Player1 = new Player("Marnie");
         Player2 = new Player("Bede");
-        InvokeRepeating("updateHP", 2.0f, 0.2f);
     }
 
     // Update is called once per frame
@@ -34,12 +33,14 @@ public class GameLogic : MonoBehaviour
     {
         Debug.Log("Player 1 turn");
         Player2.endTurn(Player1);
+        updateHP();
         currentPlayer = 1;
     }
     public void player2Turn()
     {
         Debug.Log("Player 2 turn");
         Player1.endTurn(Player2);
+        updateHP();
         currentPlayer = 2;
     }
     public void energyDetected(string energy)
@@ -48,10 +49,12 @@ public class GameLogic : MonoBehaviour
         if (currentPlayer == 1)
         {
             Player1.addEnergy(energy);
+            updateHP();
         }
         else
         {
             Player2.addEnergy(energy);
+            updateHP();
         }
     }
     public void healDetected(string healCard)
@@ -60,10 +63,12 @@ public class GameLogic : MonoBehaviour
         if (currentPlayer == 1)
         {
             Player1.heal(healCard);
+            updateHP();
         }
         else
         {
             Player2.heal(healCard);
+            updateHP();
         }
     }
 
@@ -74,12 +79,14 @@ public class GameLogic : MonoBehaviour
             if (currentPlayer == 1)
             {
                 Player1.addPokemon(pokemonName, pokemonModel);
-            }
-            else
+                updateHP();
+        }
+        else
             {
                 Player2.addPokemon(pokemonName, pokemonModel);
-            }
-            Debug.Log("finished pokemon detection");
+                updateHP();
+        }
+        Debug.Log("finished pokemon detection");
     }
 
     public void pokemonDissapeared(string pokemonName)
@@ -89,10 +96,13 @@ public class GameLogic : MonoBehaviour
             if (currentPlayer == 1)
             {
                 Player1.hidePokemon(pokemonName, pokemonModel);
+                updateHP();
             }
             else
-            {
+                {
                 Player2.hidePokemon(pokemonName, pokemonModel);
+                updateHP();
+    
             }
     }
 }
