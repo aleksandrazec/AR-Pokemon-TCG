@@ -104,14 +104,31 @@ public class Player
     public void heal(string healCard)
     {
         findActivePokemon();
-        if (healCard == "potion")
+        if (activePokemon != null)
         {
-            activePokemon.healPokemon(30);
-        } else if (healCard == "superPotion")
-        {
-            activePokemon.healPokemon(60);
+            if (healCard == "Potion")
+            {
+                activePokemon.healPokemon(30);
+            }
+            else if (healCard == "SuperPotion")
+            {
+                activePokemon.healPokemon(60);
+            }
+
+            AudioSource source = GameObject.Find(healCard).GetComponent<AudioSource>();
+            if (source != null)
+            {
+                source.Play();
+            }
+            ParticleSystem particle = GameObject.Find(healCard).GetComponentInChildren<ParticleSystem>();
+            if (particle != null)
+            {
+                GameObject particleObj = GameObject.Find("HealEffect" + healCard);
+                particleObj.transform.position = activePokemon.getModel().transform.position;
+                particle.Play();
+            }
+            Debug.Log("Heal card inside Player");
         }
-        Debug.Log("Heal card inside Player");
     }
     public void removePokemon(Pokemon pokemon)
     {
