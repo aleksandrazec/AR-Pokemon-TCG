@@ -84,14 +84,18 @@ public class Player
         if (energies.Any()) {
             Debug.Log("Check for energies");
             findActivePokemon();
-            otherPlayer.findActivePokemon();
-            if (otherPlayer.activePokemon != null)
+            if (activePokemon != null)
             {
-                activePokemon.attack(energies, otherPlayer.activePokemon);
-            }
-            energies.Clear();
-            if (otherPlayer.deadPokemonCounter>=3){
-                win();
+                otherPlayer.findActivePokemon();
+                if (otherPlayer.activePokemon != null)
+                {
+                    activePokemon.attack(energies, otherPlayer.activePokemon);
+                }
+                energies.Clear();
+                if (otherPlayer.deadPokemonCounter >= 3)
+                {
+                    win();
+                }
             }
         }
         Debug.Log("Turn ended inside Player");
