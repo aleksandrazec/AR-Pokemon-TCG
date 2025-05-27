@@ -31,6 +31,7 @@ public class GameLogic : MonoBehaviour
     }
     public void player1Turn()
     {
+        updateHP();
         Debug.Log("Player 1 turn");
         Player2.endTurn(Player1);
         gameObject.GetComponent<AudioSource>().Play();
@@ -39,6 +40,7 @@ public class GameLogic : MonoBehaviour
     }
     public void player2Turn()
     {
+        updateHP();
         Debug.Log("Player 2 turn");
         Player1.endTurn(Player2);
         gameObject.GetComponent<AudioSource>().Play();
@@ -47,6 +49,7 @@ public class GameLogic : MonoBehaviour
     }
     public void energyDetected(string energy)
     {
+        gameObject.transform.GetChild(0).GetComponent<AudioSource>().Play();
         Debug.Log("Energy detected");
         if (currentPlayer == 1)
         {
@@ -88,6 +91,7 @@ public class GameLogic : MonoBehaviour
                 Player2.addPokemon(pokemonName, pokemonModel);
                 updateHP();
         }
+        updateHP();
         Debug.Log("finished pokemon detection");
     }
 

@@ -108,7 +108,6 @@ public abstract class Pokemon
         {
             int attackPower = currentAttack.attackPower;
             Debug.Log("Pokemon attacked");
-            otherPokemon.damagePokemon(attackPower);
             ParticleSystem[] particle = pokemonModel.GetComponentsInChildren<ParticleSystem>(true);
             if (particle.Length != 0)
             {
@@ -123,6 +122,7 @@ public abstract class Pokemon
             {
                 source[0].Play();
             }
+            otherPokemon.damagePokemon(attackPower);
         }
 
     }
