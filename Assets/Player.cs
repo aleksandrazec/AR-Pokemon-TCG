@@ -146,7 +146,7 @@ public class Player
         pokemonList.Remove(pokemon);
         pokemon.hidePokemon();
         deadPokemonCounter++;
-        
+        GameObject.Find("Death").GetComponent<AudioSource>().Play();
         string livesObjectName = playerName + "Lives";
         GameObject livesObj = GameObject.Find(livesObjectName);
         TextMeshProUGUI livesText = livesObj.GetComponent<TextMeshProUGUI>();
@@ -184,7 +184,7 @@ public class Player
             activePokemon = null;
         }
         Debug.Log("Pokemon removed inside Player");
-
+        updatePokemonHealth();
     }
     public void hidePokemon(string pokemonName, GameObject pokemonModel)
     {
@@ -193,6 +193,7 @@ public class Player
             if (pokemon.getName() == pokemonName)
             {
                 pokemon.hidePokemon();
+                updatePokemonHealth();
             }
         }
         Debug.Log(pokemonName + " hidden inside Player");
@@ -256,7 +257,10 @@ public class Player
                     break;
             }
             pokemonList.Add(pokemon);
+            updatePokemonHealth();
             Debug.Log(pokemonName + " added inside Player");
         }
+        updatePokemonHealth();
     }
+
 }
