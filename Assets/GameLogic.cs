@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
 using static UnityEngine.EventSystems.EventTrigger;
@@ -11,7 +12,6 @@ public class GameLogic : MonoBehaviour
     int currentPlayer = 1;
     Player Player1;
     Player Player2;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +33,7 @@ public class GameLogic : MonoBehaviour
     {
         Debug.Log("Player 1 turn");
         Player2.endTurn(Player1);
+        gameObject.GetComponent<AudioSource>().Play();
         updateHP();
         currentPlayer = 1;
     }
@@ -40,6 +41,7 @@ public class GameLogic : MonoBehaviour
     {
         Debug.Log("Player 2 turn");
         Player1.endTurn(Player2);
+        gameObject.GetComponent<AudioSource>().Play();
         updateHP();
         currentPlayer = 2;
     }
