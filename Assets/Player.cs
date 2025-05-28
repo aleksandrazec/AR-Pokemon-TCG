@@ -67,6 +67,7 @@ public class Player
                     }
                 }
             }
+
             Debug.Log(activePokemon.getName() + " is the active pokemon");
         }
     }
@@ -214,6 +215,8 @@ public class Player
             {
                 isInList = true;
                 pokemoni.unhidePokemon();
+                updatePokemonHealth();
+
             }
         }
         if (!isInList)
