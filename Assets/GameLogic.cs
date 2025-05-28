@@ -22,7 +22,7 @@ public class GameLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void updateHP()
     {
@@ -31,21 +31,27 @@ public class GameLogic : MonoBehaviour
     }
     public void player1Turn()
     {
-        updateHP();
-        Debug.Log("Player 1 turn");
-        Player2.endTurn(Player1);
-        gameObject.GetComponent<AudioSource>().Play();
-        updateHP();
-        currentPlayer = 1;
+        if (currentPlayer == 2)
+        {
+            updateHP();
+            Debug.Log("Player 1 turn");
+            Player2.endTurn(Player1);
+            gameObject.GetComponent<AudioSource>().Play();
+            updateHP();
+            currentPlayer = 1;
+        }
     }
     public void player2Turn()
     {
-        updateHP();
-        Debug.Log("Player 2 turn");
-        Player1.endTurn(Player2);
-        gameObject.GetComponent<AudioSource>().Play();
-        updateHP();
-        currentPlayer = 2;
+        if (currentPlayer == 1)
+        {
+            updateHP();
+            Debug.Log("Player 2 turn");
+            Player1.endTurn(Player2);
+            gameObject.GetComponent<AudioSource>().Play();
+            updateHP();
+            currentPlayer = 2;
+        }
     }
     public void energyDetected(string energy)
     {
