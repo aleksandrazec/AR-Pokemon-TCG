@@ -16,6 +16,11 @@ public class Player
     {
         playerName = trainer;
     }
+
+    public int getEnergyCount()
+    {
+        return energies.Count();
+    }
     public void updatePokemonHealth()
     {
         foreach (Pokemon pokemon in pokemonList)
@@ -59,7 +64,7 @@ public class Player
             {
                 if (pokemon.visible)
                 {
-                    float position = pokemon.getModel().transform.position.z;
+                    float position = pokemon.getModel().transform.position.x;
                     if (position > bestPosition)
                     {
                         bestPosition = position;
@@ -148,8 +153,8 @@ public class Player
                 hpText.enabled = false;
             }
         }
-        pokemonList.Remove(pokemon);
         pokemon.hidePokemon();
+        pokemonList.Remove(pokemon);
         deadPokemonCounter++;
         GameObject.Find("Death").GetComponent<AudioSource>().Play();
         string livesObjectName = playerName + "Lives";

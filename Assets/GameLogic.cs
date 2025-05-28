@@ -59,14 +59,19 @@ public class GameLogic : MonoBehaviour
         Debug.Log("Energy detected");
         if (currentPlayer == 1)
         {
-            Player1.addEnergy(energy);
-            updateHP();
+            if (Player1.getEnergyCount() < 2)
+            {
+                Player1.addEnergy(energy);
+            }
         }
         else
         {
-            Player2.addEnergy(energy);
-            updateHP();
+            if (Player2.getEnergyCount() < 2)
+            {
+                Player2.addEnergy(energy);
+            }
         }
+        updateHP();
     }
     public void healDetected(string healCard)
     {
