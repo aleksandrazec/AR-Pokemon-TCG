@@ -56,7 +56,20 @@ public class GameLogic : MonoBehaviour
     public void energyDetected(string energy)
     {
         gameObject.transform.GetChild(0).GetComponent<AudioSource>().Play();
-        Debug.Log("Energy detected");
+        if (energy == "fire")
+        {
+            GameObject.Find("FireEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
+        }
+        else if(energy == "colorless")
+        {
+            GameObject.Find("ColorlessEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
+        }
+        else if(energy == "double")
+        {
+            GameObject.Find("DoubleColorlessEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
+        }
+
+            Debug.Log("Energy detected");
         if (currentPlayer == 1)
         {
             if (Player1.getEnergyCount() < 2)
