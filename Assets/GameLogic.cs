@@ -18,6 +18,7 @@ public class GameLogic : MonoBehaviour
     {
         Player1 = new Player("Marnie");
         Player2 = new Player("Bede");
+        InvokeRepeating("updateHP", 2.0f, 0.25f);
     }
 
     // Update is called once per frame
@@ -34,11 +35,9 @@ public class GameLogic : MonoBehaviour
     {
         if (currentPlayer == 2)
         {
-            updateHP();
             Debug.Log("Player 1 turn");
             Player2.endTurn(Player1);
             gameObject.GetComponent<AudioSource>().Play();
-            updateHP();
             currentPlayer = 1;
             Player1.changeColorOfText(Color.red);
             Player2.changeColorOfText(Color.white);
@@ -48,11 +47,9 @@ public class GameLogic : MonoBehaviour
     {
         if (currentPlayer == 1)
         {
-            updateHP();
             Debug.Log("Player 2 turn");
             Player1.endTurn(Player2);
             gameObject.GetComponent<AudioSource>().Play();
-            updateHP();
             currentPlayer = 2;
             Player2.changeColorOfText(Color.red);
             Player1.changeColorOfText(Color.white);
@@ -60,27 +57,6 @@ public class GameLogic : MonoBehaviour
     }
     public void energyDetected(string energy)
     {
-        gameObject.transform.GetChild(0).GetComponent<AudioSource>().Play();
-        if (energy == "fire")
-        {
-            GameObject.Find("FireEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
-        }
-        else if(energy == "colorless")
-        {
-            GameObject.Find("ColorlessEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
-        }
-        else if(energy == "double")
-        {
-            GameObject.Find("DoubleColorlessEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
-        }
-        else if(energy == "water")
-        {
-            GameObject.Find("WaterEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
-        }
-        else if(energy == "grass")
-        {
-            GameObject.Find("GrassEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
-        }
             Debug.Log("Energy detected");
         if (currentPlayer == 1)
         {
@@ -96,7 +72,6 @@ public class GameLogic : MonoBehaviour
                 Player2.addEnergy(energy);
             }
         }
-        updateHP();
     }
     public void healDetected(string healCard)
     {
@@ -104,47 +79,39 @@ public class GameLogic : MonoBehaviour
         if (currentPlayer == 1)
         {
             Player1.heal(healCard);
-            updateHP();
         }
         else
         {
             Player2.heal(healCard);
-            updateHP();
         }
     }
 
     public void pokemonDetected(string pokemonName)
     {
         GameObject pokemonModel = GameObject.Find(pokemonName);
-            Debug.Log(pokemonName + " detected");
-            if (currentPlayer == 1)
-            {
-                Player1.addPokemon(pokemonName, pokemonModel);
-                updateHP();
+        Debug.Log(pokemonName + " detected");
+        if (currentPlayer == 1)
+        {
+            Player1.addPokemon(pokemonName, pokemonModel);
         }
         else
-            {
-                Player2.addPokemon(pokemonName, pokemonModel);
-                updateHP();
+        {
+            Player2.addPokemon(pokemonName, pokemonModel);
         }
-        updateHP();
         Debug.Log("finished pokemon detection");
     }
 
     public void pokemonDissapeared(string pokemonName)
     {
         GameObject pokemonModel = GameObject.Find(pokemonName);
-            Debug.Log(pokemonName + " dissapeared");
-            if (currentPlayer == 1)
-            {
-                Player1.hidePokemon(pokemonName, pokemonModel);
-                updateHP();
-            }
-            else
-                {
-                Player2.hidePokemon(pokemonName, pokemonModel);
-                updateHP();
-    
-            }
+        Debug.Log(pokemonName + " dissapeared");
+        if (currentPlayer == 1)
+        {
+            Player1.hidePokemon(pokemonName, pokemonModel);
+        }
+        else
+        {
+            Player2.hidePokemon(pokemonName, pokemonModel);
+        }
     }
 }

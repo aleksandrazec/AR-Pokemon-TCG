@@ -74,10 +74,11 @@ public class Player
                 if (pokemon.visible)
                 {
                     activePokemon = pokemon;
+                    Debug.Log(activePokemon.getName() + " is the active pokemon");
+
                 }
             }
         }
-        Debug.Log(activePokemon.getName() + " is the active pokemon");
     }
     public void win()
     {
@@ -114,6 +115,26 @@ public class Player
         if (!energies.Contains(energy))
         {
             GameObject.Find("GameLogic").transform.GetChild(0).GetComponent<AudioSource>().Play();
+            if (energy == "fire")
+            {
+                GameObject.Find("FireEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
+            }
+            else if (energy == "colorless")
+            {
+                GameObject.Find("ColorlessEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
+            }
+            else if (energy == "double")
+            {
+                GameObject.Find("DoubleColorlessEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
+            }
+            else if (energy == "water")
+            {
+                GameObject.Find("WaterEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
+            }
+            else if (energy == "grass")
+            {
+                GameObject.Find("GrassEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
+            }
             energies.Add(energy);
             Debug.Log("Energy added inside Player");
         }
@@ -201,7 +222,6 @@ public class Player
             activePokemon = null;
         }
         Debug.Log("Pokemon removed inside Player");
-        updatePokemonHealth();
     }
     public void hidePokemon(string pokemonName, GameObject pokemonModel)
     {
@@ -210,7 +230,6 @@ public class Player
             if (pokemon.getName() == pokemonName)
             {
                 pokemon.hidePokemon();
-                updatePokemonHealth();
             }
         }
         Debug.Log(pokemonName + " hidden inside Player");
@@ -227,8 +246,6 @@ public class Player
             {
                 isInList = true;
                 pokemoni.unhidePokemon();
-                updatePokemonHealth();
-
             }
         }
         if (!isInList)
@@ -276,10 +293,8 @@ public class Player
                     break;
             }
             pokemonList.Add(pokemon);
-            updatePokemonHealth();
             Debug.Log(pokemonName + " added inside Player");
         }
-        updatePokemonHealth();
     }
 
 }
