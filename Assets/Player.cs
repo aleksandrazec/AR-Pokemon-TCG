@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Player
 {
@@ -16,7 +17,17 @@ public class Player
     {
         playerName = trainer;
     }
-
+    public void changeColorOfText(Color color)
+    {
+        string livesObjectName = playerName + "Lives";
+        GameObject livesObj = GameObject.Find(livesObjectName);
+        TextMeshProUGUI livesText = livesObj.GetComponent<TextMeshProUGUI>();
+        livesText.color = color;
+        string trainerObjectName = playerName;
+        GameObject trainerObj = GameObject.Find(trainerObjectName);
+        TextMeshProUGUI trainerText = trainerObj.GetComponent<TextMeshProUGUI>();
+        trainerText.color = color;
+    }
     public int getEnergyCount()
     {
         return energies.Count();
@@ -58,23 +69,15 @@ public class Player
     {
         if (pokemonList.Any())
         {
-            float bestPosition = -100000f;
-
             foreach (Pokemon pokemon in pokemonList)
             {
                 if (pokemon.visible)
                 {
-                    float position = pokemon.getModel().transform.position.x;
-                    if (position > bestPosition)
-                    {
-                        bestPosition = position;
-                        activePokemon = pokemon;
-                    }
+                    activePokemon = pokemon;
                 }
             }
-
-            Debug.Log(activePokemon.getName() + " is the active pokemon");
         }
+        Debug.Log(activePokemon.getName() + " is the active pokemon");
     }
     public void win()
     {
@@ -108,8 +111,12 @@ public class Player
     }
     public void addEnergy(string energy)
     {
-        energies.Add(energy);
-        Debug.Log("Energy added inside Player");
+        if (!energies.Contains(energy))
+        {
+            GameObject.Find("GameLogic").transform.GetChild(0).GetComponent<AudioSource>().Play();
+            energies.Add(energy);
+            Debug.Log("Energy added inside Player");
+        }
     }
     public void heal(string healCard)
     {

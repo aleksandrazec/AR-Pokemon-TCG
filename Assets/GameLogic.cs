@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
@@ -39,6 +40,8 @@ public class GameLogic : MonoBehaviour
             gameObject.GetComponent<AudioSource>().Play();
             updateHP();
             currentPlayer = 1;
+            Player1.changeColorOfText(Color.red);
+            Player2.changeColorOfText(Color.white);
         }
     }
     public void player2Turn()
@@ -51,11 +54,12 @@ public class GameLogic : MonoBehaviour
             gameObject.GetComponent<AudioSource>().Play();
             updateHP();
             currentPlayer = 2;
+            Player2.changeColorOfText(Color.red);
+            Player1.changeColorOfText(Color.white);
         }
     }
     public void energyDetected(string energy)
     {
-        gameObject.transform.GetChild(0).GetComponent<AudioSource>().Play();
         Debug.Log("Energy detected");
         if (currentPlayer == 1)
         {
