@@ -68,7 +68,14 @@ public class GameLogic : MonoBehaviour
         {
             GameObject.Find("DoubleColorlessEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
         }
-
+        else if(energy == "water")
+        {
+            GameObject.Find("WaterEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
+        }
+        else if(energy == "grass")
+        {
+            GameObject.Find("GrassEnergy").GetComponentInChildren<ParticleSystem>(true).Play();
+        }
             Debug.Log("Energy detected");
         if (currentPlayer == 1)
         {
