@@ -18,7 +18,6 @@ public class GameLogic : MonoBehaviour
     {
         Player1 = new Player("Marnie");
         Player2 = new Player("Bede");
-        InvokeRepeating("updateHP", 2.0f, 0.25f);
     }
 
     // Update is called once per frame
@@ -41,6 +40,7 @@ public class GameLogic : MonoBehaviour
             currentPlayer = 1;
             Player1.changeColorOfText(Color.red);
             Player2.changeColorOfText(Color.white);
+            updateHP();
         }
     }
     public void player2Turn()
@@ -53,6 +53,7 @@ public class GameLogic : MonoBehaviour
             currentPlayer = 2;
             Player2.changeColorOfText(Color.red);
             Player1.changeColorOfText(Color.white);
+            updateHP();
         }
     }
     public void energyDetected(string energy)
@@ -72,6 +73,7 @@ public class GameLogic : MonoBehaviour
                 Player2.addEnergy(energy);
             }
         }
+        updateHP();
     }
     public void healDetected(string healCard)
     {
@@ -99,6 +101,7 @@ public class GameLogic : MonoBehaviour
             Player2.addPokemon(pokemonName, pokemonModel);
         }
         Debug.Log("finished pokemon detection");
+        updateHP();
     }
 
     public void pokemonDissapeared(string pokemonName)
@@ -113,5 +116,6 @@ public class GameLogic : MonoBehaviour
         {
             Player2.hidePokemon(pokemonName, pokemonModel);
         }
+        updateHP();
     }
 }

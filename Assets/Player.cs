@@ -2,9 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Player
 {
@@ -79,6 +80,7 @@ public class Player
                 }
             }
         }
+        updatePokemonHealth();
     }
     public void win()
     {
@@ -88,6 +90,7 @@ public class Player
             TextMeshProUGUI label = textObj.GetComponent<TextMeshProUGUI>();
             label.text = playerName+ " won!";
         }
+        updatePokemonHealth();
     }
     public void endTurn(Player otherPlayer)
     {
@@ -109,6 +112,7 @@ public class Player
             }
         }
         Debug.Log("Turn ended inside Player");
+        updatePokemonHealth();
     }
     public void addEnergy(string energy)
     {
@@ -138,6 +142,7 @@ public class Player
             energies.Add(energy);
             Debug.Log("Energy added inside Player");
         }
+        updatePokemonHealth();
     }
     public void heal(string healCard)
     {
@@ -167,6 +172,7 @@ public class Player
             }
             Debug.Log("Heal card inside Player");
         }
+        updatePokemonHealth();
     }
     public void removePokemon(Pokemon pokemon)
     {
@@ -222,6 +228,8 @@ public class Player
             activePokemon = null;
         }
         Debug.Log("Pokemon removed inside Player");
+        updatePokemonHealth();
+
     }
     public void hidePokemon(string pokemonName, GameObject pokemonModel)
     {
@@ -233,7 +241,7 @@ public class Player
             }
         }
         Debug.Log(pokemonName + " hidden inside Player");
-
+        updatePokemonHealth();
     }
 
     public void addPokemon(string pokemonName, GameObject pokemonModel)
@@ -295,6 +303,12 @@ public class Player
             pokemonList.Add(pokemon);
             Debug.Log(pokemonName + " added inside Player");
         }
+        updatePokemonHealth();
+        Task.Factory.StartNew(() =>
+        {
+            Thread.Sleep(1000);
+            updatePokemonHealth();
+        });
     }
 
 }
