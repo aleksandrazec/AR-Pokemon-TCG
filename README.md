@@ -42,6 +42,9 @@ Wooloo Model, MODIFIED, link: https://sketchfab.com/3d-models/wooloo-6251869752b
 Lapras Model, MODIFIED, link: https://sketchfab.com/3d-models/pokemon-lapras-3d7364edd4e2406d87850524dcd5499b, Author: Katerina Novakova (https://sketchfab.com/KaterinaNovakova)
 
 
+Pokemon Models modified by: https://www.youtube.com/channel/UCWJAAAE5XS5Dz70z0_dnOSA
+
+
 **Pokemon Sounds:**
 
 Attack sounds, link: https://www.youtube.com/watch?v=uPlE3sJRf8E. All sounds, characters and trademarks are owned by Nintendo.
